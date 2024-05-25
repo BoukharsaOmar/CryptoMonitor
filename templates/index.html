@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoMonitor</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rising Cryptocurrencies</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Symbol</th>
+                    <th>Current Price (USD)</th>
+                    <th>24h Change (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for crypto in cryptos %}
+                <tr>
+                    <td>{{ crypto.name }}</td>
+                    <td>{{ crypto.symbol }}</td>
+                    <td>{{ crypto.current_price }}</td>
+                    <td>{{ crypto.price_change_percentage_24h }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
