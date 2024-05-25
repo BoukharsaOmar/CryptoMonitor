@@ -1,51 +1,48 @@
-# CryptoMonitor
+## CryptoMonitor
 
-CryptoMonitor is a Python-based tool designed to monitor and identify rising cryptocurrencies based on their 24-hour price change percentage. It fetches data from the CoinGecko API, processes the data to find cryptocurrencies that have increased in value by a specified threshold, and sends alerts for those that meet the criteria.
+CryptoMonitor is a Python-based tool designed to monitor and identify rising cryptocurrencies based on their 24-hour price change percentage. It fetches data from the CoinGecko API, processes the data to find cryptocurrencies that have increased in value by a specified threshold, and provides a web interface to display the results.
 
 ## Features
 
 - Fetches real-time cryptocurrency data from the CoinGecko API.
-- Identifies cryptocurrencies that have risen above a specified threshold in the last 24 hours.
-- Sends alerts for rising cryptocurrencies.
+- Identifies cryptocurrencies that have risen above a specified threshold in the     last 24 hours.
+- Provides a web interface to display rising cryptocurrencies.
 
 ## Installation
-
 To get started with CryptoMonitor, follow these steps:
 
-1. **Clone the Repository:**
+1. Clone the Repository:
 
-   ```sh
-   git clone https://github.com/yourusername/CryptoMonitor.git
-   cd CryptoMonitor
+      git clone https://github.com/boukharsaomar/CryptoMonitor.git
+      cd CryptoMonitor
 
 2. Set Up a Virtual Environment (Optional but Recommended):
 
-    python -m venv venv
-    venv\Scripts\activate  # On Windows
-    source venv/bin/activate  # On macOS/Linux
+      python -m venv venv
+      venv\Scripts\activate  # On Windows
+      source venv/bin/activate  # On macOS/Linux
 
 3. Install Required Packages:
 
-    pip install requests pandas
+      pip install -r requirements.txt
 
 ## Usage
-
-1. Run the Script:
+1. Run the Flask Application:
 
 Navigate to the directory where you saved the script and run it:
 
-    python crypto_monitor.py
+      python app.py
+      
+2. Access the Web Interface:
 
-2. Customize the Threshold:
-
-By default, the script identifies cryptocurrencies that have risen by 10% or more in the last 24 hours. You can customize this threshold by modifying the identify_rising_cryptos function in the script.
+Open your web browser and go to http://127.0.0.1:5000 to view the rising cryptocurrencies.
 
 ## Example Output
+The web interface will display a table of cryptocurrencies that meet the criteria. Example output:
 
-The script will print alerts for cryptocurrencies that meet the criteria. Example output:
-
-    Crypto Bitcoin (btc) is rising: 12.5% in the last 24 hours.
-    Crypto Ethereum (eth) is rising: 15.2% in the last 24 hours.
+      Name	   Symbol	Current Price (USD)	24h Change (%)
+      Bitcoin	btc	   50000	               12.5
+      Ethereum	eth	   4000	               15.2
 
 ## Contributing
 Contributions are welcome! If you have any suggestions or improvements, feel free to open an issue or submit a pull request.
